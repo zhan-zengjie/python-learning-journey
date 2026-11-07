@@ -1,10 +1,10 @@
 class Phone:
-    __current_voltage=0.5
+    __current_voltage=0.5             #私有成员变量
 
-    def __keep_single_core(self):
+    def __keep_single_core(self):     #私有成员方法
         print("让CPU以单核模式运行")
 
-    def call_by_5g(self):
+    def call_by_5g(self):             
         if self.__current_voltage>=1:
             print("5g通话已开启")
         else:
