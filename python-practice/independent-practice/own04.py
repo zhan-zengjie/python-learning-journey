@@ -1,3 +1,6 @@
+import json
+
+
 class AddressBook:
     def __init__(self):
         self.contacts = {}
@@ -22,6 +25,18 @@ class AddressBook:
         for key, value in sorted(self.contacts.items()):
             print(key, value)
 
+    def save(self, path="contacts.json"):
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(self.contacts, f, ensure_ascii=False, indent=2)
+
+    def load(self, path="contacts.json"):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                self.contacts =json.load(f)
+        except FileNotFoundError:
+            self.contacts = {}
+              
+
 
 book = AddressBook()
 
@@ -33,3 +48,7 @@ print(book.find("张三"))
 print(book.find("赵六"))
 print(book.delete("赵六"))
 book.show_all()
+book.save()
+book2 = AddressBook()
+book2.load()
+print(book2.contacts)
