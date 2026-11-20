@@ -1,0 +1,14 @@
+select name,population from city;
+select name from city where CountryCode ='CHN';
+select name from city where Population >5000000;
+select name from city where Population between 1000000 and 2000000;
+select name from country where code in ('CHN','USA','JPN');
+select name from country where name like '%A';
+SELECT COUNT(*) FROM city;
+SELECT COUNT(*) FROM country;
+SELECT COUNT(*) FROM city WHERE CountryCode = 'CHN';
+select name from city where CountryCode ='CHN' and Population >5000000;
+select name from country where name like '%an%';
+select name from country where IndepYear = null;
+select name from country where IndepYear IS NULL;
+select name from country where name like 'a%';
