@@ -1,0 +1,12 @@
+DESC city;
+DESC country;
+select continent,count(name) from country group by continent;
+select continent,sum(population) from country group by continent;
+select continent,avg(LifeExpectancy) from country group by continent;
+select continent,SUM(LifeExpectancy)/COUNT(*) from country group by continent;
+select continent,min(gnp),max(gnp) from country group by continent;
+select continent,count(name) from country where continent='asia' or continent='europe' group by continent;
+select countrycode,count(name) from city group by countrycode having count(name)>=100;
+select countrycode,count(name) from city where population>=1000000 group by countrycode having count(name)>=5;
+select count(*) from city where population >= 1000000;
+select count(*), count(LifeExpectancy) from country where continent='Africa';
