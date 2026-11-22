@@ -1,0 +1,12 @@
+[
+  {"name": "张三", "cls": "一班", "score": 88},
+  {"name": "李四", "cls": "一班", "score": 91},
+  {"name": "王五", "cls": "一班", "score": 75},
+  {"name": "赵六", "cls": "一班", "score": 95},
+  {"name": "孙七", "cls": "二班", "score": 72},
+  {"name": "周八", "cls": "二班", "score": 68},
+  {"name": "吴九", "cls": "二班", "score": 85},
+  {"name": "郑十", "cls": "三班", "score": 60},
+  {"name": "冯乐", "cls": "三班", "score": 99},
+  {"name": "陈雨", "cls": "三班", "score": 83}
+]
