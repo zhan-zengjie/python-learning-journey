@@ -29,11 +29,11 @@ conn.commit()
 
 
 def count_cities(conn, code):
-    cursor = conn.cursor()
+    cursor=conn.cursor()
     cursor.execute("select count(*) from world.city where countrycode = %s", (code,))
+    result=cursor.fetchone()[0]
     cursor.close()
-    return cursor.fetchone()[0]
-
+    return result
 
 print(count_cities(conn, "CHN"))
 
