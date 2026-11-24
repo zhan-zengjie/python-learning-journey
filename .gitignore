@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 .env
 my_db/
+python-basics/config.py
